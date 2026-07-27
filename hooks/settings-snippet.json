@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/style-check.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
