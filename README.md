@@ -1,5 +1,7 @@
 # stop-being-annoying-claude
 
+![The ascension of the laptop, interrupted](header.png)
+
 Let's face it, Anthropic makes the best models. But unfortunately they are run
 by an eschatological cult that desperately wants to believe they are creating
 a divine being instead of creating a tool to extend human capability. That
