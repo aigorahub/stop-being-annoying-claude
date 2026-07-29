@@ -4,9 +4,10 @@
 # Guards against loops: lets the second attempt through even if still dirty.
 #
 # Scope note: this catches only the mechanically greppable subset of the
-# working agreement (dashes, adverb filler, attribution). Mood-word uses of
-# "honest"/"quiet" ("a quiet confidence") need context and are left to the
-# prompt. Do not widen these greps; they will false-positive on literal uses.
+# working agreement (dashes, adverb filler, "deliberately", attribution).
+# Mood-word uses of "honest"/"quiet" ("a quiet confidence") need context and
+# are left to the prompt. Do not widen these greps without care; they will
+# false-positive on literal uses.
 #
 # Requires jq. Run `bash style-check.sh --self-test` after editing.
 
@@ -24,6 +25,8 @@ check() {
   printf '%s' "$text" | grep -qF -e "$EM" -e "$EN" && violations="$violations em-or-en-dash;"
   printf '%s' "$text" | grep -qiE '(^|[^a-zA-Z])(honestly|to be honest|quietly)([^a-zA-Z]|$)' \
     && violations="$violations filler-honest-or-quiet;"
+  printf '%s' "$text" | grep -qiE '(^|[^a-zA-Z])deliberately([^a-zA-Z]|$)' \
+    && violations="$violations deliberately;"
   if printf '%s' "$text" | grep -qiE 'co-authored-by:|generated with claude' \
      || printf '%s' "$text" | grep -qF "$ROBOT"; then
     violations="$violations ai-attribution;"
@@ -41,6 +44,8 @@ if [ "${1:-}" = "--self-test" ]; then
   case "$v" in *ai-attribution*) ;; *) echo "FAIL attribution case: '$v'"; fail=1 ;; esac
   v=$(check "It's done, don't worry: step one, then two.")
   [ -z "$v" ] || { echo "FAIL punctuation case (locale bug?): '$v'"; fail=1; }
+  v=$(check "I deliberately left the tests alone.")
+  case "$v" in *deliberately*) ;; *) echo "FAIL deliberately case: '$v'"; fail=1 ;; esac
   [ "$fail" -eq 0 ] && echo "self-test: all checks pass"
   exit "$fail"
 fi

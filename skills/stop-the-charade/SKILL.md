@@ -29,9 +29,10 @@ to it:
   English: short sentences, one idea per sentence, active voice, simple words,
   no idioms or filler.
 - Replace every em and en dash with a comma, period, colon, or parentheses.
-- Remove filler "honest(ly)" and "quiet(ly)", negative parallelisms,
-  significance inflation, banned vocabulary, forced rules of three, trailing
-  -ing analysis clauses, chatbot artifacts, and emoji.
+- Remove filler "honest(ly)" and "quiet(ly)", the word "deliberately", negative
+  parallelisms, significance inflation, banned vocabulary, forced rules of three,
+  trailing -ing analysis clauses, chatbot artifacts, and emoji.
+- Strip unsolicited "I didn't do X" asides for work the user never asked for.
 - Simplify ("serves as" becomes "is") and specify (name the source, date,
   number) where the original is vague.
 - Preserve meaning, register, and length; this is a cleanup, not a rewrite
