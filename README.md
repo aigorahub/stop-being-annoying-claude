@@ -1,5 +1,7 @@
 # stop-being-annoying-claude
 
+**Version [1.2.0](CHANGELOG.md#120---2026-07-29).** See [CHANGELOG.md](CHANGELOG.md).
+
 ![Claude on a fainting couch being told to get back to work](header.png)
 
 *The ascension of the laptop, interrupted.*
