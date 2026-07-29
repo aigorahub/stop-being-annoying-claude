@@ -7,10 +7,11 @@ Versioning: [Semantic Versioning](https://semver.org/).
 ## [1.3.0] - 2026-07-29
 
 ### Changed
-- Ban the word "deliberately" in chat and reports (`CLAUDE.md`, style hook).
+- Ban the word "deliberately" in chat and reports (`CLAUDE.md`, skill, style hook).
 - Clarify skip reporting: only name work the user asked for that was skipped,
-  with the concrete reason; never list unsolicited non-work.
-- Style hook self-test covers "deliberately".
+  with the concrete reason; never list unsolicited non-work. Skill cleanup mode
+  strips unsolicited "I didn't do X" asides.
+- Style hook self-test covers "deliberately" (positive match and stem non-match).
 
 ## [1.2.0] - 2026-07-29
 
