@@ -25,6 +25,9 @@ The argument is text to rewrite, a file path, or a pointer like "your last
 message" or "the README". Apply the Writing section of `~/.claude/CLAUDE.md`
 to it:
 
+- Rewrite reports and user-facing status in ASD-STE100 Simplified Technical
+  English: short sentences, one idea per sentence, active voice, simple words,
+  no idioms or filler.
 - Replace every em and en dash with a comma, period, colon, or parentheses.
 - Remove filler "honest(ly)" and "quiet(ly)", negative parallelisms,
   significance inflation, banned vocabulary, forced rules of three, trailing

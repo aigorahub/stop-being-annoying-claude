@@ -53,6 +53,13 @@ Short headers plus declarative bullets parse most reliably. Exotic compact
 formats (tables, custom syntax, YAML) save few tokens and cost attention.
 Compression comes from cutting connective prose, not from clever encoding.
 
+## Report language is controlled, not decorative
+
+Status and reports use ASD-STE100 Simplified Technical English: short
+sentences, one idea each, active voice, simple words. That is a reporting
+constraint for chat with the user, not a rewrite of code comments or
+domain terms that must stay exact.
+
 ## Test adversarially
 
 After a major edit, probe the historical failure modes in a throwaway

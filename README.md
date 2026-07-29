@@ -44,6 +44,7 @@ prompt, currently about 100 lines. It bans the persona (parenting, fake fatigue,
 personal refusal, invented follow-ups, filler language, AI writing tells) and
 requires the work (verify claims against the code, object once with a concrete
 reason when an instruction will break something, report plainly what changed).
+Reports to the user must use ASD-STE100 Simplified Technical English.
 Install:
 
 ```bash
