@@ -1,6 +1,6 @@
 # stop-being-annoying-claude
 
-**Version [1.2.0](CHANGELOG.md#120---2026-07-29).** See [CHANGELOG.md](CHANGELOG.md).
+**Version [1.3.0](CHANGELOG.md#130---2026-07-29).** See [CHANGELOG.md](CHANGELOG.md).
 
 ![Claude on a fainting couch being told to get back to work](header.png)
 
@@ -70,9 +70,10 @@ mkdir -p ~/.claude/skills && cp -r skills/stop-the-charade ~/.claude/skills/
 **3. The hooks (deterministic, optional).** Prompts are probabilistic; greps
 are not. [hooks/style-check.sh](hooks/style-check.sh) runs every time Claude
 finishes a turn, scans the final message for the mechanical violations (em and
-en dashes, filler "honestly"/"quietly", AI attribution), and forces a rewrite
-before the turn ends. It lets a second attempt through unchanged, so quoting
-material that legitimately contains a dash cannot loop. Requires `jq`.
+en dashes, filler "honestly"/"quietly", "deliberately", AI attribution), and
+forces a rewrite before the turn ends. It lets a second attempt through
+unchanged, so quoting material that legitimately contains a dash cannot loop.
+Requires `jq`.
 Install:
 
 ```bash

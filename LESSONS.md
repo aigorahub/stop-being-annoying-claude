@@ -60,6 +60,13 @@ sentences, one idea each, active voice, simple words. That is a reporting
 constraint for chat with the user, not a rewrite of code comments or
 domain terms that must stay exact.
 
+## Skips report only when the user asked
+
+Listing work the model "chose not to do" is noise when the user never
+requested it. Report a skip only when it was part of the instruction, and
+state the concrete reason. Unsolicited non-work inventories waste attention
+and look like agency theater.
+
 ## Test adversarially
 
 After a major edit, probe the historical failure modes in a throwaway
